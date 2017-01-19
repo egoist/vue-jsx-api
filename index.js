@@ -8,13 +8,21 @@ const app = express()
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
+app.options('/transform', cors())
 app.post('/transform', cors(), (req, res) => {
-  const {code} = req.body
-  const result = babel.transform(code, {
-    presets: ['vue']
-  })
   res.type('text')
-  res.end(result.code)
+  try {
+    const {code} = req.body
+    const result = babel.transform(code, {
+      presets: ['vue']
+    })
+    res.send({
+      code: result.code
+    })
+  } catch (err) {
+    res.status(500)
+    res.send(err.message)
+  }
 })
 
 app.get('/', (req, res) => {
