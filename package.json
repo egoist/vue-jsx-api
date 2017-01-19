@@ -1,0 +1,38 @@
+{
+  "name": "vue-jsx-api",
+  "version": "0.0.0",
+  "description": "API for compiling Vue JSX.",
+  "repository": {
+    "url": "egoist/vue-jsx-api",
+    "type": "git"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engine": {
+    "node": "7"
+  },
+  "scripts": {
+    "test": "echo 'no tests!' && npm run lint",
+    "lint": "xo index.js",
+    "deploy": "now",
+    "start": "node index.js"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "xo": "^0.17.1"
+  },
+  "xo": {
+    "space": 2,
+    "semicolon": false
+  },
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-preset-vue": "^0.1.0",
+    "body-parser": "^1.16.0",
+    "cors": "^2.8.1",
+    "express": "^4.14.0"
+  }
+}
