@@ -2,7 +2,7 @@
 
 Check out https://vue-jsx-api.now.sh for API usage.
 
-Check out the frone-end https://vue-jsx.surge.sh for real-world usage.
+Check out the front-end https://vue-jsx.surge.sh for real-world usage.
 
 ## Contributing
 
